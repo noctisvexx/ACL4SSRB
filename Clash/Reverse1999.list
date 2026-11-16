@@ -1,6 +1,8 @@
-# 重返未来1999（国服 / 深蓝互动 bluepoch）—— 必须直连
-# 国服游戏检测海外 IP，一旦走节点会被拒绝登录，故固定进「🎮 reverse1999」组（DIRECT）
+# 重返未来1999 国际服（Global / Bluepoch）—— 固定直连（DIRECT）
+# 实测：国内直连可正常进游戏；走节点（机房 IP）会被 ACE 反作弊风控拦住，登不进去。
+# 故固定进「🎮 reverse1999」组（默认 DIRECT），避免被总开关/兜底组带去代理。
 # 注意：本规则必须排在 ProxyGFWlist / FINAL 之前，否则会被兜底组抢先匹配成走节点
+# 域名同时覆盖国际服 re1999.bluepoch.com、国服 re.bluepoch.com 及游戏服务器 sl96 / 下载 listdl
 DOMAIN-SUFFIX,bluepoch.com
 DOMAIN-KEYWORD,bluepoch
 DOMAIN-SUFFIX,sl96.com
