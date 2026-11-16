@@ -1,0 +1,8 @@
+# 重返未来1999（国服 / 深蓝互动 bluepoch）—— 必须直连
+# 国服游戏检测海外 IP，一旦走节点会被拒绝登录，故固定进「🎮 reverse1999」组（DIRECT）
+# 注意：本规则必须排在 ProxyGFWlist / FINAL 之前，否则会被兜底组抢先匹配成走节点
+DOMAIN-SUFFIX,bluepoch.com
+DOMAIN-KEYWORD,bluepoch
+DOMAIN-SUFFIX,sl96.com
+DOMAIN-KEYWORD,sl96
+DOMAIN-SUFFIX,listdl.com

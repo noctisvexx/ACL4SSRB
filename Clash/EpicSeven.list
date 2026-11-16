@@ -57,9 +57,4 @@ DOMAIN-KEYWORD,aidis-games
 DOMAIN-SUFFIX,*.aidis-games.com
 DOMAIN-SUFFIX,*shweet.icu
 
-#reverse1999
-DOMAIN-KEYWORD,sl96
-DOMAIN-KEYWORD,bluepoch
-DOMAIN-KEYWORD,appsflyersdk
-DOMAIN-SUFFIX,*.sl96.com
-DOMAIN-SUFFIX,*.listdl.com
+# reverse1999 已拆到独立规则 Clash/Reverse1999.list（国服必须直连，不能跟随本组的节点出口）
