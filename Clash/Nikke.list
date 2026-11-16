@@ -9,7 +9,6 @@ IP-CIDR,43.152.114.31/32,no-resolve
 DOMAIN-SUFFIX,nikke-kr.com
 DOMAIN-SUFFIX,intlgame.com
 DOMAIN-SUFFIX,iegcom.com
-DOMAIN-KEYWORD,nikke
 
 #ACE
 DOMAIN,down.anticheatexpert.com
