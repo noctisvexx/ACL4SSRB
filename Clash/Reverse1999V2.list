@@ -1,0 +1,20 @@
+# 重返未来1999 国际服（Global / Bluepoch）—— 固定直连（DIRECT）
+# 实测（2026-11-16 抓包）：国内直连可正常进游戏；走节点（机房 IP）会被 ACE 反作弊风控拦住，登不进去。
+# 故固定进「🎮 reverse1999」组（默认 DIRECT），避免被总开关/兜底组带去代理。
+#
+# ⚠️ 为什么用 V2 文件名：raw.githubusercontent 有 5 分钟 CDN 缓存，
+#    旧文件 Reverse1999.list 已被订阅转换服务缓存成「无 sl916 的旧版」，
+#    换全新 URL 保证 subconverter 一定拉到含 sl916 的新规则。
+#
+# ⚠️ 真实游戏域名是 sl916（不是 sl96！）。
+#    实测 datacollection-en.sl916.com -> 43.174.224.9（腾讯云国内 IP，直连可通），
+#    之前写成 sl96 导致该域名漏网 -> Match 兜底 -> 走日本节点 -> ACE 风控拦 -> 进不去。
+DOMAIN-SUFFIX,bluepoch.com
+DOMAIN-KEYWORD,bluepoch
+DOMAIN-SUFFIX,sl916.com
+DOMAIN-KEYWORD,sl916
+DOMAIN-SUFFIX,sl96.com
+DOMAIN-KEYWORD,sl96
+DOMAIN-SUFFIX,listdl.com
+# 裸 IP 兜底：万一域名规则再漏网，直接按 IP 直连（游戏服在腾讯云 43.174.224.0/24）
+IP-CIDR,43.174.224.0/24
