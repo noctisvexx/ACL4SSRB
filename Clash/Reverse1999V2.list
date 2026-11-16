@@ -18,3 +18,7 @@ DOMAIN-KEYWORD,sl96
 DOMAIN-SUFFIX,listdl.com
 # 裸 IP 兜底：万一域名规则再漏网，直接按 IP 直连（游戏服在腾讯云 43.174.224.0/24）
 IP-CIDR,43.174.224.0/24
+# 宽网段兜底：实测 1999 网关还有 43.174.x.x / 43.163.x.x，漏一个都会 ACE 风控进不去。
+# 排在 NIKKE 域名规则之后由 ini 顺序保证（NIKKE 规则已前置），不会误伤账号服。
+IP-CIDR,43.174.0.0/16,no-resolve
+IP-CIDR,43.163.0.0/16,no-resolve

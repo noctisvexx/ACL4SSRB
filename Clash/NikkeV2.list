@@ -1,0 +1,63 @@
+# NIKKE 胜利女神：妮姬 国际服（Shift Up / Level Infinite / Tencent）
+# 实测（2026-11-16）：只有走节点能进；直连会卡登录/选服报系统错误。
+# 本规则全部指向 🎮 Nikke 组（走节点）。
+#
+# ⚠️ 为什么用 V2 文件名：raw.githubusercontent 有 5 分钟 CDN 缓存，
+#    订阅转换服务还会二次缓存。换全新 URL 保证一定拉到这份补全版。
+#
+# ⚠️ 关键1：本 ruleset 在 ini 中必须排在 🛑 广告拦截(BanAD) 之前。
+#    AppsFlyer 是启动/选服必须握手的归因 SDK，不是广告；
+#    排在其后会被 BanAD 的 REJECT 抢先命中 → 手机连不上 / 选服系统错误。
+# ⚠️ 关键2：域名来自 Verge（能玩那套）抓到的连接 + 路由器抓包，全量固化。
+
+# === 大厅 / 游戏服 ===
+DOMAIN,global-lobby.nikke-kr.com
+DOMAIN-SUFFIX,nikke-kr.com
+DOMAIN,cloud.nikke-kr.com
+DOMAIN-SUFFIX,sg-vas.intlgame.com
+DOMAIN-SUFFIX,intlgame.com
+DOMAIN,aws-na.intlgame.com
+DOMAIN,aws-na-dr.intlgame.com
+DOMAIN,data-aws-na.intlgame.com
+
+# === 账号 / 启动器 ===
+DOMAIN-SUFFIX,playerinfinite.com
+DOMAIN-SUFFIX,levelinfinite.com
+DOMAIN-SUFFIX,blablalink.com
+DOMAIN-SUFFIX,jupiterlauncher.com
+DOMAIN,www.jupiterlauncher.com
+DOMAIN-SUFFIX,centauriglobal.com
+DOMAIN,na1.centauriglobal.com
+DOMAIN-SUFFIX,gamepass.com
+DOMAIN,catalog.gamepass.com
+
+# === 崩溃上报 / 日志 ===
+DOMAIN-SUFFIX,iegcom.com
+DOMAIN,pc.crashsight-us.iegcom.com
+DOMAIN-SUFFIX,fleetlogd.com
+DOMAIN,na.fleetlogd.com
+
+# === ACE 反作弊 ===
+DOMAIN-SUFFIX,anticheatexpert.com
+DOMAIN,down.anticheatexpert.com
+
+# === AppsFlyer 归因SDK（启动/选服必需，绝不能被 REJECT）===
+DOMAIN-SUFFIX,appsflyersdk.com
+DOMAIN-KEYWORD,appsflyer
+DOMAIN,cdn-settings.appsflyersdk.com
+DOMAIN,xhpjc6-cdn-settings.appsflyersdk.com
+DOMAIN,inapps.appsflyersdk.com
+DOMAIN,launches.appsflyersdk.com
+DOMAIN,eoktv7.launches.appsflyersdk.com
+DOMAIN,roovza-launches.appsflyersdk.com
+DOMAIN,skadsdk.appsflyersdk.com
+
+# === 兜底关键词 ===
+DOMAIN-KEYWORD,nikke
+
+# === 游戏网关/游戏服 IP 段（实测连接，统一走节点避免出口分裂）===
+IP-CIDR,43.152.114.31/32,no-resolve
+IP-CIDR,52.8.237.0/24,no-resolve
+IP-CIDR,54.183.155.0/24,no-resolve
+IP-CIDR,54.219.74.0/24,no-resolve
+IP-CIDR,137.184.135.0/24,no-resolve
